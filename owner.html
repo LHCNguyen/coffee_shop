@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quán Coffee - Chủ Quán</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1><img src="image/logo.jpg" alt="Quán Coffee" style="height: 40px;"></h1>
+        <nav>
+            <a href="index.html">Khách hàng</a>
+            <a href="staff.html">Nhân viên</a>
+            <a href="owner.html">Chủ quán</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Quản lý sản phẩm</h2>
+        <div class="card">
+            <h3>Thêm sản phẩm</h3>
+            <div class="form-group">
+                <input type="text" id="productName" placeholder="Tên sản phẩm" required>
+                <input type="number" id="productPrice" placeholder="Giá" required>
+                <input type="text" id="productImage" placeholder="URL ảnh" required>
+                <button onclick="addProduct()">Thêm</button>
+            </div>
+            <h3>Danh sách sản phẩm</h3>
+            <div id="productsList">
+                <!-- Sản phẩm sẽ được thêm bằng JavaScript -->
+            </div>
+        </div>
+
+        <h2>Quản lý nguyên liệu</h2>
+        <div class="card">
+            <h3>Thêm nguyên liệu</h3>
+            <div class="form-group">
+                <input type="text" id="productName" placeholder="Tên sản phẩm" required>
+                <input type="number" id="productPrice" placeholder="Giá" required>
+                <input type="file" id="productImage" accept="image/*" required>
+                <button onclick="addProduct()">Thêm</button>
+            </div>
+            <h3>Danh sách nguyên liệu</h3>
+            <div id="ingredientsList">
+                <!-- Nguyên liệu sẽ được thêm bằng JavaScript -->
+            </div>
+        </div>
+
+        <h2>Báo cáo</h2>
+        <div class="card">
+            <h3>Thống kê theo ngày</h3>
+            <div class="form-group">
+                <input type="date" id="reportDate">
+                <button onclick="getReport('day')">Xem</button>
+            </div>
+            <h3>Thống kê theo tháng</h3>
+            <div class="form-group">
+                <input type="month" id="reportMonth">
+                <button onclick="getReport('month')">Xem</button>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+    <script>
+        window.onload = function() {
+            displayProducts();
+            displayIngredients();
+        };
+    </script>
+</body>
+</html>

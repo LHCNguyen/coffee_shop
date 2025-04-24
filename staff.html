@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quán Coffee - Nhân Viên</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1><img src="image/logo.jpg" alt="Quán Coffee" style="height: 40px;"></h1>
+        <nav>
+            <a href="index.html">Khách hàng</a>
+            <a href="staff.html">Nhân viên</a>
+            <a href="owner.html">Chủ quán</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Kho nguyên liệu</h2>
+        <div id="ingredients" class="card">
+            <!-- Nguyên liệu sẽ được thêm bằng JavaScript -->
+        </div>
+        <h2>Đơn hàng</h2>
+        <div id="orders" class="card">
+            <p>Chưa có đơn hàng</p>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+    <script>
+        window.onload = function() {
+            displayIngredients();
+            displayOrders();
+        };
+    </script>
+</body>
+</html>
